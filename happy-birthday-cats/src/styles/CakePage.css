@@ -1,0 +1,117 @@
+.cake-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: #000000; /* Black background for lights-off effect */
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    text-align: center;
+    overflow: hidden;
+  }
+  
+  .cake-page h1 {
+    color: #ffffff; /* White text for visibility */
+    font-size: 3rem;
+    margin-bottom: 80px;
+  }
+  
+  /* Cake Styling */
+  .cake {
+    position: relative;
+    width: 75%;
+    height: 50%; /* Larger cake height */
+    background: #ff80ab;
+    border-radius: 30px;
+    margin-top: 30px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+  }
+  
+  .cake-body {
+    position: absolute;
+    bottom: 10%;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    font-size: 4rem;
+    font-weight: bold;
+  }
+  
+  /* Candles */
+  .candles {
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    top: -60px;
+    width: 100%;
+  }
+  
+  .candle {
+    width: 20px; /* Increased candle width */
+    height: 80px; /* Increased candle height */
+    background: #ffffff;
+    border-radius: 5px;
+    position: relative;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+  }
+  
+  .candle:hover {
+    transform: scale(1.2);
+  }
+  
+  .candle.lit .flame {
+    position: absolute;
+    top: -25px; /* Adjusted for larger flame */
+    left: 50%;
+    width: 15px; /* Increased flame width */
+    height: 25px; /* Increased flame height */
+    background: radial-gradient(circle, #ffdf00 40%, #ff4500);
+    border-radius: 50%;
+    transform: translateX(-50%);
+    animation: flicker 0.5s infinite alternate;
+  }
+  
+  .candle.blown-out {
+    background: #444444; /* Dim gray for blown-out candles */
+    cursor: default;
+  }
+  
+  /* Animations */
+  @keyframes flicker {
+    0% {
+      transform: translateX(-50%) scale(1);
+      opacity: 1;
+    }
+    100% {
+      transform: translateX(-50%) scale(1.2);
+      opacity: 0.8;
+    }
+  }
+  
+  /* General smoke styles */
+.smoke {
+    position: absolute;
+    top: -40px; /* Position smoke above the candle */
+    left: 50%;
+    width: 10px;
+    height: 30px;
+    background: radial-gradient(circle, rgba(200, 200, 200, 0.8) 0%, rgba(200, 200, 200, 0.1) 100%);
+    border-radius: 50%;
+    transform: translateX(-50%);
+    animation: rise 2s ease-out forwards;
+    opacity: 0.8;
+  }
+  
+  /* Smoke animation to rise and fade */
+  @keyframes rise {
+    0% {
+      transform: translateX(-50%) translateY(0);
+      opacity: 0.8;
+    }
+    100% {
+      transform: translateX(-50%) translateY(-40px); /* Smoke rises */
+      opacity: 0; /* Fade out */
+    }
+  }

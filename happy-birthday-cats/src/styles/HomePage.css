@@ -1,0 +1,72 @@
+/* Full-Page Styling */
+.home {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to bottom, #ffe4e1, #ffcccb);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+  }
+  
+  /* Main Content Styling */
+  .main-content {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.8);
+    border: 5px solid #ff80ab;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .main-content h1 {
+    font-size: 3rem;
+    color: #d81b60;
+    margin-bottom: 10px;
+  }
+  
+  .main-content p {
+    font-size: 1.5rem;
+    color: #6a1b9a;
+    margin-bottom: 20px;
+  }
+  
+  .start-button {
+    background-color: #ff80ab;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .start-button:hover {
+    background-color: #f50057;
+  }
+  
+  /* Cat Images */
+  .cat {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .cat-left {
+    left: 10%;
+  }
+  
+  .cat-right {
+    right: 10%;
+  }
+  
+  .cat img {
+    width: 150px;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  }
+  
