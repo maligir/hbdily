@@ -28,7 +28,7 @@ function ChatPage() {
         { inputs: `Respond as a cat: ${userInput}` },
         {
           headers: {
-            Authorization: `Bearer YOUR_API_KEY`, // Replace with your API key
+            Authorization: `Bearer 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`, // Replace with your API key
           },
         }
       );
